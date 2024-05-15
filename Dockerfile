@@ -10,8 +10,8 @@ RUN pip install django
 # Create and set the working directory
 WORKDIR /app
 
-# Copy the Django project directory into the container
-COPY learning_log /app
+# Copy the entire project directory into the container
+COPY . /app
 
 # Run the application
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
